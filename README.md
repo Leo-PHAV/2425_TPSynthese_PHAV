@@ -1,2 +1,13 @@
-# 2425_TPSynthese_PHAV
-TP de Synthèse (MAJEUR INFO)
+En travaillant sur ce projet, j’ai vraiment progressé en programmation système en C. Créer un shell minimaliste a été une expérience super intéressante, car cela m’a permis de comprendre de manière très concrète comment un système d’exploitation interagit avec les programmes. Par exemple, avec des fonctions comme `fork`, `execvp` et `wait`, j’ai appris à créer des processus, à les laisser finir avant de passer à autre chose, et à faire en sorte qu’ils communiquent entre eux. Ça m’a vraiment permis de saisir l’essence du multitâche et de voir comment plusieurs programmes peuvent tourner en même temps tout en étant bien coordonnés.
+
+Les redirections d’entrée et de sortie (`<` et `>`) ont été une autre étape importante. Manipuler les descripteurs de fichiers avec `dup2` pour rediriger les flux de données m’a permis de comprendre comment fonctionne un shell. Ces concepts, qui étaient un peu flous en cours, sont devenus beaucoup plus clairs dès que je les ai appliqués dans le projet. Cela m’a aussi ouvert les yeux sur l’importance de la communication entre les programmes, notamment quand on doit travailler avec des fichiers plutôt que de simplement communiquer avec l’utilisateur via le terminal.
+
+J’ai aussi appris à mesurer les performances du programme avec `clock_gettime`. Ça m’a fait réaliser à quel point l’optimisation et la gestion des ressources sont importantes, surtout quand le programme doit tourner de manière fluide sur des systèmes limités. Cette partie m’a permis de comprendre à quel point la précision des mesures de temps peut être cruciale, notamment pour des applications sensibles aux délais.
+
+L’analyse syntaxique a été un gros défi, mais aussi un moment clé du projet. En utilisant `strtok` pour découper et analyser les commandes, j’ai appris à gérer des commandes complexes de manière propre et efficace. Ça m’a fait comprendre à quel point un bon parsing est essentiel pour que le programme fonctionne correctement.
+
+La gestion des erreurs a aussi été un apprentissage important. Apprendre à anticiper les erreurs et à fournir des messages clairs a été crucial pour rendre le programme plus fiable et agréable à utiliser. Ça m’a aussi montré que, parfois, il faut faire attention aux petits détails pour offrir une expérience utilisateur fluide et sans accroc.
+
+Enfin, j’ai pris conscience de l’importance de créer une interface simple, mais fonctionnelle. Le prompt dynamique, qui s’adapte en fonction des commandes, m’a aidé à voir à quel point une interface soignée peut améliorer l’expérience, même dans un programme en ligne de commande.
+
+Au final, ce projet a été une super occasion de lier théorie et pratique. Il m’a permis de mieux comprendre comment fonctionnent les systèmes d’exploitation et m’a donné des compétences essentielles pour avancer en tant que développeur. Créer ce shell minimaliste a été un vrai tournant dans mon apprentissage, et je me sens maintenant plus confiant pour attaquer des projets plus complexes.
