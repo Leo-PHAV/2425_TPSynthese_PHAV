@@ -63,6 +63,7 @@ int calculateElapsedTime(const struct timespec *start, const struct timespec *en
            (end->tv_nsec - start->tv_nsec) / 1e6;
 }
 
+// parsage de la commande afin de gérer les arguments
 void complexCommand(const char *buf, char **args, size_t maxArgs) {
     size_t i = 0;
 
@@ -73,7 +74,7 @@ void complexCommand(const char *buf, char **args, size_t maxArgs) {
         args[i++] = token;
         token = strtok(NULL, " ");
     }
-    args[i] = NULL;
+    args[i] = NULL; // nécéssaire pour la fonction execvp
 }
 
 int redirections(char **args) {
